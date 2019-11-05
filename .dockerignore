@@ -1,0 +1,4 @@
+# git folders
+.git
+build
+node_modules
