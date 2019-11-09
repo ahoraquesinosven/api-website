@@ -1,0 +1,29 @@
+version: "3"
+services:
+  strapi:
+    container_name: "strapi-be"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+    environment:
+      - DATABASE_CLIENT=postgres
+      - DATABASE_NAME=observatorio_db
+      - DATABASE_HOST=localhost
+      - DATABASE_PORT=5432
+      - DATABASE_USERNAME=elpatriarcado
+      - DATABASE_PASSWORD=sevaacaer
+    depends_on:
+      - db
+
+  db:
+    container_name: "db"
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=observatorio_db
+      - POSTGRES_USER=elpatriarcado
+      - POSTGRES_PASSWORD=sevaacaer
