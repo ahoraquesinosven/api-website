@@ -1,6 +1,8 @@
 # git folders
 .git
+.db
 build
 node_modules
 exports
 .cache
+docker-compose.yml
