@@ -1,0 +1,22 @@
+substitutions:
+  _SERVICE_NAME: api-website
+
+steps:
+  # Build the production docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$SHORT_SHA', '.']
+
+  # Push the docker image to GCR
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$SHORT_SHA' ]
+
+  # Deploy to cloud run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+      'beta', 'run', 'deploy', '${_SERVICE_NAME}',
+      '--region', 'us-central1',
+      '--image', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$SHORT_SHA',
+      '--platform', 'managed',
+      '--allow-unauthenticated',
+      '--set-env-vars', 'DATABASE_CLIENT=${_DATABASE_CLIENT},DATABASE_NAME=${_DATABASE_NAME},DATABASE_HOST=/cloudsql/${_DATABASE_INSTANCE},DATABASE_USERNAME=${_DATABASE_USERNAME},DATABASE_PASSWORD=${_DATABASE_PASSWORD},HOST=${_HOST}',
+    ]

@@ -14,6 +14,7 @@ services:
       - ./package-lock.json:/app/package-lock.json
       - ./favicon.ico:/app/favicon.ico
     environment:
+      - NODE_ENV=development
       - DATABASE_CLIENT=postgres
       - DATABASE_NAME=observatorio-website
       - DATABASE_HOST=db
