@@ -1,16 +1,22 @@
 version: "3"
 services:
   strapi:
-    container_name: "strapi-be"
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: observatorio/api-website
+    build: .
+    command: npm run develop
     ports:
       - "1337:1337"
+    volumes:
+      - ./api:/app/api/
+      - ./config:/app/config/
+      - ./extensions:/app/extensions/
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+      - ./favicon.ico:/app/favicon.ico
     environment:
       - DATABASE_CLIENT=postgres
-      - DATABASE_NAME=observatorio_db
-      - DATABASE_HOST=localhost
+      - DATABASE_NAME=observatorio-website
+      - DATABASE_HOST=db
       - DATABASE_PORT=5432
       - DATABASE_USERNAME=elpatriarcado
       - DATABASE_PASSWORD=sevaacaer
@@ -18,12 +24,12 @@ services:
       - db
 
   db:
-    container_name: "db"
     image: postgres
-    restart: always
     ports:
       - "5432:5432"
+    volumes:
+      - "./.db:/var/lib/postgresql/data"
     environment:
-      - POSTGRES_DB=observatorio_db
+      - POSTGRES_DB=observatorio-website
       - POSTGRES_USER=elpatriarcado
       - POSTGRES_PASSWORD=sevaacaer
