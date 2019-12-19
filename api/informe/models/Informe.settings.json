@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "informes",
+  "info": {
+    "name": "informe",
+    "description": "Lo vamos a utilizar para  Registro Femicidios, Encuestas o cualquier informe que querramos compartir\n"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "titulo": {
+      "required": true,
+      "type": "text"
+    },
+    "resumen": {
+      "required": true,
+      "type": "richtext"
+    },
+    "imagenPrincipal": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "Archivo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "PeriodoInformeDesde": {
+      "type": "date",
+      "required": true
+    },
+    "PeriodoInformeHasta": {
+      "required": true,
+      "type": "date"
+    },
+    "NumeroDeLey": {
+      "type": "string"
+    },
+    "categoria": {
+      "model": "informecategoria"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "categorias",
+  "info": {
+    "name": "informecategoria",
+    "description": "Categorias para seleccionar en los informes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

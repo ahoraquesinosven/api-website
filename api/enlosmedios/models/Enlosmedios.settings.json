@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "enlosmedios",
+  "info": {
+    "name": "enlosmedios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "Nota": {
+      "default": "Texto de la noticia",
+      "required": true,
+      "type": "richtext"
+    },
+    "ImagenPrincipal": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Fuente": {
+      "required": true,
+      "type": "string"
+    },
+    "FuenteLink": {
+      "type": "text",
+      "required": true
+    },
+    "FechaDeLaNoticia": {
+      "required": true,
+      "type": "date"
+    }
+  }
+}

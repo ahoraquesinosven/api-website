@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "teammembers",
+  "info": {
+    "name": "teammember",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "briefDescription": {
+      "required": true,
+      "type": "richtext"
+    },
+    "twitter": {
+      "unique": true,
+      "type": "string"
+    },
+    "instagram": {
+      "unique": true,
+      "type": "string"
+    },
+    "linkedin": {
+      "unique": true,
+      "type": "string"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Foto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

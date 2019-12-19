@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/enlosmedios",
+      "handler": "Enlosmedios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enlosmedios/count",
+      "handler": "Enlosmedios.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enlosmedios/:id",
+      "handler": "Enlosmedios.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/enlosmedios",
+      "handler": "Enlosmedios.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/enlosmedios/:id",
+      "handler": "Enlosmedios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/enlosmedios/:id",
+      "handler": "Enlosmedios.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
