@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mediapresences",
+      "handler": "Mediapresence.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mediapresences/count",
+      "handler": "Mediapresence.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mediapresences/:id",
+      "handler": "Mediapresence.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mediapresences",
+      "handler": "Mediapresence.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mediapresences/:id",
+      "handler": "Mediapresence.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mediapresences/:id",
+      "handler": "Mediapresence.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

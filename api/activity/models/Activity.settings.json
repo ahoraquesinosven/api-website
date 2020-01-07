@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "basicpages",
+  "collectionName": "activities",
   "info": {
-    "name": "basicpage",
-    "description": "Páginas sueltas que se usan en el sitio, cómo la sección de Historia"
+    "name": "activity",
+    "description": "Actividades"
   },
   "options": {
     "increments": true,
@@ -15,25 +15,28 @@
   },
   "attributes": {
     "title": {
-      "unique": true,
       "required": true,
       "type": "text"
     },
-    "description": {
+    "ActivityDate": {
       "required": true,
-      "default": "Description",
+      "type": "date"
+    },
+    "Location": {
+      "required": true,
+      "type": "text"
+    },
+    "Description": {
+      "required": true,
       "type": "richtext"
     },
     "MainImage": {
       "model": "file",
       "via": "related",
-      "plugin": "upload",
-      "required": true
+      "plugin": "upload"
     },
-    "slug": {
-      "unique": true,
-      "required": true,
-      "type": "text"
+    "category": {
+      "model": "activitycategory"
     }
   }
 }

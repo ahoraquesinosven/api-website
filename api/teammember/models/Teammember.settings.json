@@ -3,7 +3,7 @@
   "collectionName": "teammembers",
   "info": {
     "name": "teammember",
-    "description": ""
+    "description": "Miembros del equipo"
   },
   "options": {
     "increments": true,
@@ -14,7 +14,7 @@
     "comment": ""
   },
   "attributes": {
-    "briefDescription": {
+    "Description": {
       "required": true,
       "type": "richtext"
     },
@@ -34,7 +34,7 @@
       "type": "string",
       "required": true
     },
-    "Foto": {
+    "Photo": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
