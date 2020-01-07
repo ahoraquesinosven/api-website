@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "activitycategories",
+  "info": {
+    "name": "activitycategory",
+    "description": "Categorías de las actividades"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    }
+  }
+}

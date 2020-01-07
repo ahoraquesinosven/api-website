@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "activities",
+  "info": {
+    "name": "activity",
+    "description": "Actividades"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "text"
+    },
+    "ActivityDate": {
+      "required": true,
+      "type": "date"
+    },
+    "Location": {
+      "required": true,
+      "type": "text"
+    },
+    "Description": {
+      "required": true,
+      "type": "richtext"
+    },
+    "MainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "category": {
+      "model": "activitycategory"
+    }
+  }
+}
