@@ -26,12 +26,13 @@
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "Attachment": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "FromDate": {
       "type": "date",
@@ -47,7 +48,8 @@
     "AdditionalImages": {
       "collection": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "category": {
       "model": "reportcategory"
