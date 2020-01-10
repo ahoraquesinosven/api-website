@@ -28,7 +28,7 @@
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "slug": {
       "unique": true,
