@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "activities",
+  "collectionName": "media_presences",
   "info": {
-    "name": "activity",
-    "description": "Actividades"
+    "name": "MediaPresence",
+    "description": "Presencia en los medios"
   },
   "options": {
     "increments": true,
@@ -16,14 +16,11 @@
   },
   "attributes": {
     "title": {
-      "required": true,
-      "type": "text"
+      "type": "text",
+      "required": true
     },
-    "Location": {
-      "required": true,
-      "type": "text"
-    },
-    "Description": {
+    "Content": {
+      "default": "Texto de la noticia",
       "required": true,
       "type": "richtext"
     },
@@ -33,11 +30,17 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
-      "model": "activity-category"
+    "Source": {
+      "required": true,
+      "type": "string"
     },
-    "ActivityDateTime": {
-      "type": "datetime"
+    "SourceLink": {
+      "type": "text",
+      "required": true
+    },
+    "PublicationDate": {
+      "required": true,
+      "type": "date"
     }
   }
 }

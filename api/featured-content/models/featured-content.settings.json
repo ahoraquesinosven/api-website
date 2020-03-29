@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "featured_contents",
+  "info": {
+    "name": "FeaturedContent",
+    "description": "Contenido seleccionado para aparecer en la página principal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Summary": {
+      "type": "text",
+      "required": true
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "activity": {
+      "model": "activity"
+    },
+    "campaign": {
+      "model": "campaign"
+    },
+    "media_presence": {
+      "model": "media-presence"
+    },
+    "report": {
+      "model": "report"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "activities",
+  "collectionName": "team_members",
   "info": {
-    "name": "activity",
-    "description": "Actividades"
+    "name": "TeamMember",
+    "description": "Miembros del equipo"
   },
   "options": {
     "increments": true,
@@ -15,29 +15,31 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
-      "required": true,
-      "type": "text"
-    },
-    "Location": {
-      "required": true,
-      "type": "text"
-    },
     "Description": {
       "required": true,
       "type": "richtext"
     },
-    "MainImage": {
+    "twitter": {
+      "unique": true,
+      "type": "string"
+    },
+    "instagram": {
+      "unique": true,
+      "type": "string"
+    },
+    "linkedin": {
+      "unique": true,
+      "type": "string"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Photo": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
-    },
-    "category": {
-      "model": "activity-category"
-    },
-    "ActivityDateTime": {
-      "type": "datetime"
     }
   }
 }
