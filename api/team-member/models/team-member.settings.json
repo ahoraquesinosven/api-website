@@ -19,15 +19,15 @@
       "required": true,
       "type": "richtext"
     },
-    "twitter": {
+    "Twitter": {
       "unique": true,
       "type": "string"
     },
-    "instagram": {
+    "Instagram": {
       "unique": true,
       "type": "string"
     },
-    "linkedin": {
+    "LinkedIn": {
       "unique": true,
       "type": "string"
     },

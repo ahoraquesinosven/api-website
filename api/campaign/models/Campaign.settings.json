@@ -15,7 +15,7 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "text",
       "required": true
     },
@@ -46,6 +46,10 @@
     },
     "Summary": {
       "type": "richtext"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

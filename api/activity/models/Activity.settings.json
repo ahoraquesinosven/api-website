@@ -15,7 +15,7 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
+    "Title": {
       "required": true,
       "type": "text"
     },
@@ -33,11 +33,15 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
+    "Category": {
       "model": "activity-category"
     },
     "ActivityDateTime": {
       "type": "datetime"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

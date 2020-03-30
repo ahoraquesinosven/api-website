@@ -25,16 +25,16 @@
       "plugin": "upload",
       "required": false
     },
-    "activity": {
+    "Activity": {
       "model": "activity"
     },
-    "campaign": {
+    "Campaign": {
       "model": "campaign"
     },
-    "media_presence": {
+    "MediaPresence": {
       "model": "media-presence"
     },
-    "report": {
+    "Report": {
       "model": "report"
     }
   }

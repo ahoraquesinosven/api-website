@@ -10,15 +10,15 @@
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "required": true
     },
-    "description": {
+    "Description": {
       "type": "richtext",
       "required": true
     },
-    "cover": {
+    "Cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",

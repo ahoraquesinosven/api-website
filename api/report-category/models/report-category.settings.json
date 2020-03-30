@@ -15,7 +15,7 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "unique": true,
       "required": true

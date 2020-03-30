@@ -15,7 +15,7 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "text",
       "required": true
     },
@@ -41,6 +41,10 @@
     "PublicationDate": {
       "required": true,
       "type": "date"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

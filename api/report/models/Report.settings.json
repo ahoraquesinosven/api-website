@@ -52,8 +52,12 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
+    "Category": {
       "model": "report-category"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }
