@@ -4,7 +4,8 @@
   "collectionName": "reports",
   "info": {
     "name": "report",
-    "description": "Lo vamos a utilizar para  Registro Femicidios, Encuestas o cualquier informe que querramos compartir\n"
+    "description": "Lo vamos a utilizar para  Registro Femicidios, Encuestas o cualquier informe que querramos compartir",
+    "mainField": "Slug"
   },
   "options": {
     "increments": true,

@@ -4,7 +4,8 @@
   "collectionName": "featured_contents",
   "info": {
     "name": "FeaturedContent",
-    "description": "Contenido seleccionado para aparecer en la página principal"
+    "description": "Contenido seleccionado para aparecer en la página principal",
+    "mainField": "Title"
   },
   "options": {
     "increments": true,

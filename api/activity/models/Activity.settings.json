@@ -4,7 +4,8 @@
   "collectionName": "activities",
   "info": {
     "name": "activity",
-    "description": "Actividades"
+    "description": "Actividades",
+    "mainField": "Slug"
   },
   "options": {
     "increments": true,

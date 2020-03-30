@@ -4,7 +4,8 @@
   "collectionName": "report_categories",
   "info": {
     "name": "ReportCategory",
-    "description": "Categorias para seleccionar en los informes"
+    "description": "Categorias para seleccionar en los informes",
+    "mainField": "Title"
   },
   "options": {
     "increments": true,

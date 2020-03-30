@@ -4,7 +4,8 @@
   "collectionName": "campaigns",
   "info": {
     "name": "campaign",
-    "description": "Campañas "
+    "description": "Campañas",
+    "mainField": "Slug"
   },
   "options": {
     "increments": true,

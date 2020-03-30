@@ -3,7 +3,9 @@
   "connection": "default",
   "collectionName": "about_uses",
   "info": {
-    "name": "About Us"
+    "name": "About Us",
+    "description": "Contenido de la página de información acerca del observatorio",
+    "mainField": "Title"
   },
   "options": {
     "increments": true,

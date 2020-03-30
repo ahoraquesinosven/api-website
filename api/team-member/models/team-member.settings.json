@@ -4,7 +4,8 @@
   "collectionName": "team_members",
   "info": {
     "name": "TeamMember",
-    "description": "Miembros del equipo"
+    "description": "Miembros del equipo",
+    "mainField": "Name"
   },
   "options": {
     "increments": true,

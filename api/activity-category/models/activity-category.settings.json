@@ -4,7 +4,8 @@
   "collectionName": "activity_categories",
   "info": {
     "name": "ActivityCategory",
-    "description": "Categorías de las actividades"
+    "description": "Categorías de las actividades",
+    "mainField": "Title"
   },
   "options": {
     "increments": true,

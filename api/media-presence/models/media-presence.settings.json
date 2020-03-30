@@ -4,7 +4,8 @@
   "collectionName": "media_presences",
   "info": {
     "name": "MediaPresence",
-    "description": "Presencia en los medios"
+    "description": "Presencia en los medios",
+    "mainField": "Slug"
   },
   "options": {
     "increments": true,
