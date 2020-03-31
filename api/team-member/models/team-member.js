@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * Lifecycle callbacks for the `Teammember` model.
- */
-
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.

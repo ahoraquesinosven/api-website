@@ -4,8 +4,7 @@
   "collectionName": "activities",
   "info": {
     "name": "activity",
-    "description": "Actividades",
-    "mainField": "Slug"
+    "description": "Actividades"
   },
   "options": {
     "increments": true,
@@ -41,8 +40,8 @@
       "type": "datetime"
     },
     "Slug": {
-      "type": "string",
-      "unique": true
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }

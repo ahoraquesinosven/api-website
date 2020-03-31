@@ -4,8 +4,7 @@
   "collectionName": "media_presences",
   "info": {
     "name": "MediaPresence",
-    "description": "Presencia en los medios",
-    "mainField": "Slug"
+    "description": "Presencia en los medios"
   },
   "options": {
     "increments": true,
@@ -44,8 +43,8 @@
       "type": "date"
     },
     "Slug": {
-      "type": "string",
-      "unique": true
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }

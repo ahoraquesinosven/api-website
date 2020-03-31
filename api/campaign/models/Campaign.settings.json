@@ -4,8 +4,7 @@
   "collectionName": "campaigns",
   "info": {
     "name": "campaign",
-    "description": "Campañas",
-    "mainField": "Slug"
+    "description": "Campañas"
   },
   "options": {
     "increments": true,
@@ -49,8 +48,8 @@
       "type": "richtext"
     },
     "Slug": {
-      "type": "string",
-      "unique": true
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }
