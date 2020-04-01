@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Lifecycle callbacks for the `featured-content` model.
+ */
+
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
@@ -16,7 +20,7 @@ module.exports = {
   // After fetching a value.
   // Fired after a `fetch` operation.
   // afterFetch: async (model, response, options) => {},
-  
+
   // Before fetching all values.
   // Fired before a `fetchAll` operation.
   // beforeFetchAll: async (model, columns, options) => {},
@@ -49,4 +53,3 @@ module.exports = {
   // Fired after a `delete` query.
   // afterDestroy: async (model, attrs, options) => {}
 };
-

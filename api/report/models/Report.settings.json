@@ -1,9 +1,10 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "reports",
   "info": {
     "name": "report",
-    "description": "Lo vamos a utilizar para  Registro Femicidios, Encuestas o cualquier informe que querramos compartir\n"
+    "description": "Lo vamos a utilizar para  Registro Femicidios, Encuestas o cualquier informe que querramos compartir"
   },
   "options": {
     "increments": true,
@@ -51,8 +52,12 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
-      "model": "reportcategory"
+    "Category": {
+      "model": "report-category"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "team_members",
+  "info": {
+    "name": "TeamMember",
+    "description": "Miembros del equipo",
+    "mainField": "Name"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Description": {
+      "required": true,
+      "type": "richtext"
+    },
+    "Twitter": {
+      "unique": true,
+      "type": "string"
+    },
+    "Instagram": {
+      "unique": true,
+      "type": "string"
+    },
+    "LinkedIn": {
+      "unique": true,
+      "type": "string"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Lifecycle callbacks for the `ActivityCategory` model.
+ */
+
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
@@ -49,4 +53,3 @@ module.exports = {
   // Fired after a `delete` query.
   // afterDestroy: async (model, attrs, options) => {}
 };
-

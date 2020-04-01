@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "campaigns",
+  "collectionName": "media_presences",
   "info": {
-    "name": "campaign",
-    "description": "Campañas"
+    "name": "MediaPresence",
+    "description": "Presencia en los medios"
   },
   "options": {
     "increments": true,
@@ -19,9 +19,10 @@
       "type": "text",
       "required": true
     },
-    "LaunchDate": {
-      "type": "date",
-      "required": true
+    "Content": {
+      "default": "Texto de la noticia",
+      "required": true,
+      "type": "richtext"
     },
     "MainImage": {
       "model": "file",
@@ -29,23 +30,17 @@
       "plugin": "upload",
       "required": false
     },
-    "AdditionalImages": {
-      "collection": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
-    "Attachment": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
-    "LawNumber": {
+    "Source": {
+      "required": true,
       "type": "string"
     },
-    "Summary": {
-      "type": "richtext"
+    "SourceLink": {
+      "type": "text",
+      "required": true
+    },
+    "PublicationDate": {
+      "required": true,
+      "type": "date"
     },
     "Slug": {
       "type": "uid",

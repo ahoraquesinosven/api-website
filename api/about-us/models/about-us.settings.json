@@ -3,30 +3,28 @@
   "connection": "default",
   "collectionName": "about_uses",
   "info": {
-    "name": "About Us"
+    "name": "About Us",
+    "description": "Contenido de la página de información acerca del observatorio",
+    "mainField": "Title"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "required": true
     },
-    "description": {
+    "Description": {
       "type": "richtext",
       "required": true
     },
-    "cover": {
+    "Cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
     }
   }
 }
