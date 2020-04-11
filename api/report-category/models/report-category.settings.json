@@ -5,7 +5,7 @@
   "info": {
     "name": "ReportCategory",
     "description": "Categorias para seleccionar en los informes",
-    "mainField": "Title"
+    "mainField": "title"
   },
   "options": {
     "increments": true,
@@ -16,10 +16,14 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

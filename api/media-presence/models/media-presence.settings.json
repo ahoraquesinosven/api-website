@@ -15,36 +15,40 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
-      "type": "text",
+    "title": {
+      "type": "string",
       "required": true
     },
-    "Content": {
-      "default": "Texto de la noticia",
-      "required": true,
-      "type": "richtext"
-    },
-    "MainImage": {
+    "mainImage": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "Source": {
-      "required": true,
-      "type": "string"
-    },
-    "SourceLink": {
+    "summary": {
       "type": "text",
       "required": true
     },
-    "PublicationDate": {
+    "content": {
+      "default": "Texto de la noticia",
+      "required": true,
+      "type": "richtext"
+    },
+    "source": {
+      "required": true,
+      "type": "string"
+    },
+    "sourceLink": {
+      "type": "text",
+      "required": true
+    },
+    "publicationDate": {
       "required": true,
       "type": "date"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     }
   }
 }

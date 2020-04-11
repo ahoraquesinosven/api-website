@@ -15,33 +15,37 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
+    "title": {
       "required": true,
-      "type": "text"
+      "type": "string"
     },
-    "Location": {
-      "required": true,
-      "type": "text"
-    },
-    "Description": {
-      "required": true,
-      "type": "richtext"
-    },
-    "MainImage": {
+    "mainImage": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "Category": {
-      "model": "activity-category"
+    "summary": {
+      "type": "text",
+      "required": true
     },
-    "ActivityDateTime": {
+    "content": {
+      "required": true,
+      "type": "richtext"
+    },
+    "location": {
+      "required": true,
+      "type": "text"
+    },
+    "dateTime": {
       "type": "datetime"
     },
-    "Slug": {
+    "category": {
+      "model": "activity-category"
+    },
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     }
   }
 }

@@ -5,22 +5,22 @@
   "info": {
     "name": "About Us",
     "description": "Contenido de la página de información acerca del observatorio",
-    "mainField": "Title"
+    "mainField": "title"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Description": {
-      "type": "richtext",
-      "required": true
+    "content": {
+      "required": true,
+      "type": "richtext"
     },
-    "Cover": {
+    "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",

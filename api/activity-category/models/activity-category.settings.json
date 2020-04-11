@@ -5,7 +5,7 @@
   "info": {
     "name": "ActivityCategory",
     "description": "Categorías de las actividades",
-    "mainField": "Title"
+    "mainField": "title"
   },
   "options": {
     "increments": true,
@@ -16,9 +16,13 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
+    "title": {
       "required": true,
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
