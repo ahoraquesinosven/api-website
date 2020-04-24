@@ -15,41 +15,46 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
-      "type": "text",
+    "title": {
+      "type": "string",
       "required": true
     },
-    "LaunchDate": {
-      "type": "date",
-      "required": true
-    },
-    "MainImage": {
+    "mainImage": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "AdditionalImages": {
+    "summary": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "launchDate": {
+      "type": "date",
+      "required": true
+    },
+    "additionalImages": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "Attachment": {
+    "attachment": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "LawNumber": {
+    "lawNumber": {
       "type": "string"
     },
-    "Summary": {
-      "type": "richtext"
-    },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     }
   }
 }

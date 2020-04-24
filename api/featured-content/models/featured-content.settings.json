@@ -4,28 +4,13 @@
   "collectionName": "featured_contents",
   "info": {
     "name": "FeaturedContent",
-    "description": "Contenido seleccionado para aparecer en la página principal",
-    "mainField": "Title"
+    "description": "Contenido seleccionado para aparecer en la página principal"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Title": {
-      "type": "string",
-      "required": true
-    },
-    "Summary": {
-      "type": "text",
-      "required": true
-    },
-    "Thumbnail": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "Activity": {
       "model": "activity"
     },

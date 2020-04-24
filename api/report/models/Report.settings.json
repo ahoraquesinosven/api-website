@@ -15,49 +15,53 @@
     "comment": ""
   },
   "attributes": {
-    "Title": {
+    "title": {
       "required": true,
-      "type": "text"
+      "type": "string"
     },
-    "Summary": {
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "summary": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
       "required": true,
       "type": "richtext"
     },
-    "MainImage": {
+    "attachment": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "Attachment": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
-    "FromDate": {
+    "fromDate": {
       "type": "date",
       "required": true
     },
-    "ToDate": {
+    "toDate": {
       "required": true,
       "type": "date"
     },
-    "LawNumber": {
+    "lawNumber": {
       "type": "string"
     },
-    "AdditionalImages": {
+    "additionalImages": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "Category": {
+    "category": {
       "model": "report-category"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     }
   }
 }

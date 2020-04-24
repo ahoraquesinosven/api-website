@@ -16,27 +16,27 @@
     "comment": ""
   },
   "attributes": {
-    "Description": {
+    "content": {
       "required": true,
       "type": "richtext"
     },
-    "Twitter": {
+    "twitter": {
       "unique": true,
       "type": "string"
     },
-    "Instagram": {
+    "instagram": {
       "unique": true,
       "type": "string"
     },
-    "LinkedIn": {
+    "linkedIn": {
       "unique": true,
       "type": "string"
     },
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Photo": {
+    "photo": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
