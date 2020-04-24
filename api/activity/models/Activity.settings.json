@@ -41,7 +41,8 @@
       "type": "datetime"
     },
     "category": {
-      "model": "activity-category"
+      "model": "activity-category",
+      "required": true
     },
     "slug": {
       "type": "uid",
