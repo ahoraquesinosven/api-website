@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "home_images",
+  "info": {
+    "name": "Home Image"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "mainImageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "mainImageSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "activity": {
+      "model": "activity"
+    },
+    "campaign": {
+      "model": "campaign"
+    },
+    "media_presence": {
+      "model": "media-presence"
+    },
+    "report": {
+      "model": "report"
+    }
+  }
+}
