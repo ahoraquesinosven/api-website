@@ -57,8 +57,7 @@
       "required": false
     },
     "category": {
-      "model": "report-category",
-      "required": true
+      "model": "report-category"
     },
     "slug": {
       "type": "uid",
