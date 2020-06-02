@@ -1,8 +1,8 @@
 {
-  "name": "api-website",
+  "name": "@observatorio/api-website",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Content API for the main observatorio website",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -11,24 +11,24 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "knex": "^0.20.11",
-    "pg": "^7.18.2",
-    "strapi": "^3.0.0-beta.19.3",
-    "strapi-admin": "^3.0.0-beta.19.3",
-    "strapi-connector-bookshelf": "^3.0.0-beta.19.3",
-    "strapi-plugin-content-manager": "^3.0.0-beta.19.3",
-    "strapi-plugin-content-type-builder": "^3.0.0-beta.19.3",
-    "strapi-plugin-email": "^3.0.0-beta.19.3",
-    "strapi-plugin-upload": "^3.0.0-beta.19.3",
-    "strapi-plugin-users-permissions": "^3.0.0-beta.19.3",
-    "strapi-provider-upload-google-cloud-storage": "^3.0.0-beta.18.8",
-    "strapi-utils": "^3.0.0-beta.19.3"
+    "knex": "<0.20.0",
+    "pg": "latest",
+    "strapi": "3.0.1",
+    "strapi-admin": "3.0.1",
+    "strapi-connector-bookshelf": "3.0.1",
+    "strapi-plugin-content-manager": "3.0.1",
+    "strapi-plugin-content-type-builder": "3.0.1",
+    "strapi-plugin-email": "3.0.1",
+    "strapi-plugin-upload": "3.0.1",
+    "strapi-plugin-users-permissions": "3.0.1",
+    "strapi-provider-upload-google-cloud-storage": "^3.0.0",
+    "strapi-utils": "3.0.1"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Gisela Morinigo <gisemo@gmail.com>"
   },
   "strapi": {
-    "uuid": "89d888e4-7eb3-4fae-af4b-ad2f7da5f603"
+    "uuid": "3f802cb2-985c-4460-af31-83c6519ae7ef"
   },
   "engines": {
     "node": ">=10.0.0",
