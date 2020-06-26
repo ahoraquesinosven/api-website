@@ -1,10 +1,10 @@
 'use strict';
 
 const featuredContentTypes = [
-  { table: "activities", kind: "activity" },
-  { table: "media_presences", kind: "media_presence" },
-  { table: "reports", kind: "report" },
-  { table: "campaigns", kind: "campaign" },
+  { table: "activities", kind: "activity", main_date: "dateTime" },
+  { table: "media_presences", kind: "media_presence", main_date: "publicationDate"  },
+  { table: "reports", kind: "report", main_date: "toDate"   },
+  { table: "campaigns", kind: "campaign", main_date: "launchDate"   },
 ];
 
 module.exports = {
@@ -21,6 +21,7 @@ module.exports = {
         "slug",
         sql.raw("? as ??", [content.kind, "kind"]),
         sql.raw("? as ??", [content.table, "related_type"]),
+        sql.raw("?? as ??", [content.main_date, "main_date"])
       ])
       .from(content.table)
     );
@@ -37,10 +38,11 @@ module.exports = {
         "content.summary",
         "content.slug",
         "content.kind",
+        "content.main_date",
         { mainImageUrl: "image.url" },
       ])
       .from({ content: "all_content" })
-      .leftJoin({ contentImage: "upload_file_morph" }, { 
+      .leftJoin({ contentImage: "upload_file_morph" }, {
           "content.id": "contentImage.related_id",
           "content.related_type": "contentImage.related_type",
           "contentImage.field": sql.raw("?", ["mainImage"]),
