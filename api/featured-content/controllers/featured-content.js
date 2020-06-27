@@ -1,10 +1,10 @@
 'use strict';
 
 const featuredContentTypes = [
-  { table: "activities", kind: "activity", main_date: "dateTime" },
-  { table: "media_presences", kind: "media_presence", main_date: "publicationDate"},
-  { table: "reports", kind: "report", main_date: "toDate"},
-  { table: "campaigns", kind: "campaign", main_date: "launchDate"},
+  { table: "activities", kind: "activity", mainDate: "dateTime" },
+  { table: "media_presences", kind: "media_presence", mainDate: "publicationDate"},
+  { table: "reports", kind: "report", mainDate: "toDate"},
+  { table: "campaigns", kind: "campaign", mainDate: "launchDate"},
 ];
 
 
@@ -24,7 +24,7 @@ module.exports = {
         "slug",
         sql.raw("? as ??", [content.kind, "kind"]),
         sql.raw("? as ??", [content.table, "related_type"]),
-        sql.raw("?? as ??", [content.main_date, "main_date"]),
+        sql.raw("?? as ??", [content.mainDate, "main_date"]),
       ])
       .from(content.table)
     );
@@ -41,7 +41,7 @@ module.exports = {
         "content.summary",
         "content.slug",
         "content.kind",
-        "content.main_date",
+        { mainDate: "content.main_date" },
         { mainImageUrl: "image.url" },
       ])
       .from({ content: "all_content" })
