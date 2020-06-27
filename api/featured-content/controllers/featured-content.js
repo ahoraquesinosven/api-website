@@ -1,15 +1,18 @@
 'use strict';
 
 const featuredContentTypes = [
-  { table: "activities", kind: "activity" },
-  { table: "media_presences", kind: "media_presence" },
-  { table: "reports", kind: "report" },
-  { table: "campaigns", kind: "campaign" },
+  { table: "activities", kind: "activity", mainDate: "dateTime" },
+  { table: "media_presences", kind: "media_presence", mainDate: "publicationDate"},
+  { table: "reports", kind: "report", mainDate: "toDate"},
+  { table: "campaigns", kind: "campaign", mainDate: "launchDate"},
 ];
+
+
 
 module.exports = {
   index: async (ctx) => {
     const sql = strapi.connections.default;
+
 
     const contentQueries = featuredContentTypes.map(content => sql
       .select([
@@ -21,6 +24,7 @@ module.exports = {
         "slug",
         sql.raw("? as ??", [content.kind, "kind"]),
         sql.raw("? as ??", [content.table, "related_type"]),
+        sql.raw("?? as ??", [content.mainDate, "main_date"]),
       ])
       .from(content.table)
     );
@@ -37,10 +41,11 @@ module.exports = {
         "content.summary",
         "content.slug",
         "content.kind",
+        { mainDate: "content.main_date" },
         { mainImageUrl: "image.url" },
       ])
       .from({ content: "all_content" })
-      .leftJoin({ contentImage: "upload_file_morph" }, { 
+      .leftJoin({ contentImage: "upload_file_morph" }, {
           "content.id": "contentImage.related_id",
           "content.related_type": "contentImage.related_type",
           "contentImage.field": sql.raw("?", ["mainImage"]),
@@ -48,7 +53,7 @@ module.exports = {
       .leftJoin({ image: "upload_file" }, {
         "contentImage.upload_file_id": "image.id"
       })
-      .orderBy("created_at", "desc")
+      .orderBy("main_date", "desc")
       .limit(ctx.query._limit || 10);
   }
 };
