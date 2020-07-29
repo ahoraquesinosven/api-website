@@ -21,7 +21,7 @@
       "type": "date",
       "required": true
     },
-    "article_category": {
+    "category": {
       "model": "article-category"
     },
     "slug": {
@@ -63,6 +63,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "author": {
+      "model": "team-member"
     }
   }
 }
