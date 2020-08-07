@@ -5,6 +5,7 @@ const featuredContentTypes = [
   { table: 'media_presences', kind: 'media_presence', mainDate: 'publicationDate'},
   { table: 'reports', kind: 'report', mainDate: 'toDate'},
   { table: 'campaigns', kind: 'campaign', mainDate: 'launchDate'},
+  { table: 'articles', kind: 'article', mainDate: 'articleDate'},
 ];
 
 
