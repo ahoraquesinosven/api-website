@@ -47,7 +47,8 @@
       "enum": [
         "miembro",
         "colaboradora"
-      ]
+      ],
+      "required": true
     }
   }
 }
