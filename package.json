@@ -19,7 +19,7 @@
     "babel-eslint": "latest"
   },
   "dependencies": {
-    "knex": "^0.20.0",
+    "knex": "^2.4.0",
     "pg": "latest",
     "strapi": "3.0.1",
     "strapi-admin": "3.0.1",
